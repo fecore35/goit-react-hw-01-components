@@ -1,8 +1,5 @@
-import Profile from "components/Profile/Profile";
-import user from "../../db/user.json";
-
-function Button() {
-  return <Profile {...user} />;
+function Button({ text }) {
+  return <button type="button">{text}</button>;
 }
 
 export default Button;
