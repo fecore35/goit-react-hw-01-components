@@ -1,4 +1,5 @@
 import PropTypes from "prop-types";
+import s from "./Profile.module.css";
 
 function Profile({
   name,
@@ -9,14 +10,14 @@ function Profile({
 }) {
   return (
     <div className="profile">
-      <div className="description">
-        <img src={avatar} alt={name} className="avatar" />
-        <p className="name">{name}</p>
-        {tag && <p className="tag">@{tag}</p>}
-        <p className="location">{location}</p>
+      <div className={s.description}>
+        <img src={avatar} alt={name} className={s.avatar} />
+        <p className={s.name}>{name}</p>
+        {tag && <p className={s.tag}>@{tag}</p>}
+        <p className={s.location}>{location}</p>
       </div>
 
-      <ul className="stats">
+      <ul className={s.stats}>
         <li>
           <span className="label">Followers</span>
           <span className="quantity">{followers}</span>

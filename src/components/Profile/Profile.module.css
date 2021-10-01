@@ -1,0 +1,59 @@
+.gap {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+.description {
+  text-align: center;
+}
+
+.avatar {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background-color: #b0fff0;
+  object-fit: cover;
+  display: block;
+  margin-bottom: 2rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.name {
+  font-size: 1.5em;
+  composes: gap;
+}
+
+.tag {
+  font-size: 0.875em;
+  composes: gap;
+}
+
+.location {
+  composes: gap;
+}
+
+.stats {
+  display: flex;
+  list-style: none;
+  padding-left: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+
+  background: #b0fff0;
+  color: #000529;
+  padding: 15px;
+}
+
+.stats > li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 0 0 33.3333%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.stats > li:not(:last-of-type) {
+  border-right: 1px solid;
+}
