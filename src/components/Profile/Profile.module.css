@@ -3,6 +3,10 @@
   margin-bottom: 1rem;
 }
 
+.profile {
+  margin-bottom: 25px;
+}
+
 .description {
   text-align: center;
 }
@@ -42,7 +46,7 @@
 
   background: #b0fff0;
   color: #000529;
-  padding: 15px;
+  padding: 15px 0;
 }
 
 .stats > li {
@@ -56,4 +60,13 @@
 
 .stats > li:not(:last-of-type) {
   border-right: 1px solid;
+}
+
+.stats .label {
+  font-weight: 600;
+}
+
+.stats .quantity {
+  font-weight: 300;
+  font-size: 1.25em;
 }
