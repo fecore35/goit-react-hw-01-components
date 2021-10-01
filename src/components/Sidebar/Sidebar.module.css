@@ -1,0 +1,16 @@
+.sidebar {
+  max-width: 500px;
+  overflow-y: auto;
+  background: #000529;
+  color: #b0fff0;
+}
+
+.left {
+  composes: sidebar;
+  order: -1;
+}
+
+.right {
+  composes: sidebar;
+  order: 999;
+}

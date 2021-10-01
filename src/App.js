@@ -6,11 +6,17 @@ import Profile from "components/Profile/Profile";
 import Statistics from "components/Statistics/Statistics";
 import FriendList from "components/FriendList/FriendList";
 import TransactionHistory from "components/TransactionHistory/TransactionHistory";
+import FullScreen from "components/FullScreen/FullScreen";
+import Sidebar from "components/Sidebar/Sidebar";
+import ContentWrapper from "components/ContentWrapper/ContentWrapper";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
+    <FullScreen>
+      <ContentWrapper>
+        <TransactionHistory items={transactions} />
+      </ContentWrapper>
+      <Sidebar>
         <Profile
           name={user.name}
           tag={user.tag}
@@ -19,11 +25,9 @@ function App() {
           stats={user.stats}
         />
         <Statistics title="Upload stats" stats={statisticalData} />
-        <Statistics stats={statisticalData} />
         <FriendList friends={friends} />
-        <TransactionHistory items={transactions} />;
-      </header>
-    </div>
+      </Sidebar>
+    </FullScreen>
   );
 }
 
