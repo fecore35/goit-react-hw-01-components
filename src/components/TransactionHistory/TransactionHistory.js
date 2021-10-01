@@ -1,3 +1,5 @@
+import PropTypes from "prop-types";
+
 function TransactionHistory({ items }) {
   return (
     <table className="transaction-history">
@@ -23,5 +25,13 @@ function TransactionHistory({ items }) {
     </table>
   );
 }
+
+TransactionHistory.defaultProps = {
+  items: [],
+};
+
+TransactionHistory.propTypes = {
+  items: PropTypes.arrayOf(PropTypes.object).isRequired,
+};
 
 export default TransactionHistory;
