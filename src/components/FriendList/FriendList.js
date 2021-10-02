@@ -4,15 +4,19 @@ import s from "./FlirndList.module.css";
 function FriendList({ friends }) {
   return (
     <ul className={s.list}>
-      {friends.map(({ id, avatar, name, isOnline }) => {
-        return (
-          <li key={id} className={s.item}>
-            <span className={isOnline ? s.online : s.offline}></span>
-            <img className={s.avatar} src={avatar} alt={name} width="48" />
-            <p className={s.name}>{name}</p>
-          </li>
-        );
-      })}
+      {friends
+        .sort((a, b) => {
+          return b.isOnline - a.isOnline;
+        })
+        .map(({ id, avatar, name, isOnline }) => {
+          return (
+            <li key={id} className={s.item}>
+              <span className={isOnline ? s.online : s.offline}></span>
+              <img className={s.avatar} src={avatar} alt={name} width="48" />
+              <p className={s.name}>{name}</p>
+            </li>
+          );
+        })}
     </ul>
   );
 }
