@@ -1,0 +1,44 @@
+.list {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  padding: 15px;
+  background: #b0fff0;
+  color: #000529;
+}
+
+.item:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.status {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+.online {
+  composes: status;
+  background-color: green;
+}
+
+.offline {
+  composes: status;
+  background-color: red;
+}
+
+.avatar {
+  margin-left: 10px;
+}
+
+.name {
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-left: 10px;
+}
